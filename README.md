@@ -158,7 +158,7 @@ JSON mode (capped)
 
 ## Limitations
 
-- **Entropy ≠ secret** – high entropy may indicate compression, media data, or randomness  
+- **Entropy != secret** – high entropy may indicate compression, media data, or randomness  
 - Does not distinguish encryption vs compression  
 - Results require manual interpretation or additional heuristics  
 
@@ -172,5 +172,5 @@ MIT – see `LICENSE` file.
 Courtesyl
 
 https://github.com/Courtesyl
-=======
+
 
