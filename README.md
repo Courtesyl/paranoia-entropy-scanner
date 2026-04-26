@@ -25,6 +25,9 @@ sudo cp paranoia.py /usr/local/bin/   # optional
 ```
 
 ## Usage
+
+```bash
+
 paranoia.py [-h] [-t THRESHOLD] [-c CHUNK] [-s STEP] [-o OUTPUT]
                    [--smart] [--auto] [--quiet] [--json] [--version]
                    path
@@ -32,21 +35,35 @@ paranoia.py [-h] [-t THRESHOLD] [-c CHUNK] [-s STEP] [-o OUTPUT]
 Paranoia Entropy Scanner v1 — rolling histogram, streaming merge, JSON limit
 
 positional arguments:
+
   path                  Path to file or '-' for stdin
 
 options:
+
   -h, --help            show this help message and exit
+
   -t, --threshold THRESHOLD
+
                         Entropy threshold (0–8). For AES/RSA keys use 7.2+ (default: 6.0)
+
   -c, --chunk CHUNK     Window size in bytes (default: 256)
+
   -s, --step STEP       Step size in bytes (default: 64)
+
                         Small steps (e.g., 1) drastically increase CPU time
+
   -o, --output OUTPUT   Save results to file
+
   --smart               Show highest-entropy sub-window (only for strong hits)
+
   --auto                Multi-scale scan (32,64,128,256) – reads file multiple times
+
   --quiet               Suppress progress bar
+
   --json                JSON output (machine-readable, capped at 1,000,000 hits)
+  
   --version             Show version
+```
 
 ## Examples
 Basic firmware scan
@@ -151,7 +168,9 @@ JSON mode (capped)
 MIT – see `LICENSE` file.
 
 ## Author
+
 Courtesyl
+
 https://github.com/Courtesyl
 =======
 
