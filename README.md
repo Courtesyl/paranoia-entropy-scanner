@@ -63,16 +63,16 @@ cat encrypted.bin | ./paranoia.py - -t 6.0 --json > report.json
 Quiet mode for automation
 ./paranoia.py firmware.bin -t 7.5 -c 32 -s 8 --quiet -o hits.txt
 
-Output examples
+## Output examples:
 
 Text mode (merged intervals)
 File: firmware.bin | Size: 1048576 bytes
 Params: threshold=7.2, step=16, smart=True, auto=False
 Window sizes: [64]
---------------------------------------------------------------------------------
+
 0x0000a4f0 - 0x0000a530 (window 64)
 0x0001b800 - 0x0001b900 (window 64)
---------------------------------------------------------------------------------
+
 Done. Found suspicious regions: 2
 
 JSON mode (capped)
