@@ -50,21 +50,34 @@ options:
 
 ## Examples
 Basic firmware scan
+
+```bash
 ./paranoia.py firmware.bin -t 7.2 -c 64 -s 16 --smart
+```
 
 Scan raw device (requires root)
+
+```bash
 sudo ./paranoia.py /dev/sda -c 4096 --auto
 
  Reading raw devices may be slow and requires appropriate permissions.
+```
 
 Pipe with JSON output
+
+```bash
 cat encrypted.bin | ./paranoia.py - -t 6.0 --json > report.json
+```
 
 Quiet mode for automation
+
+```bash
 ./paranoia.py firmware.bin -t 7.5 -c 32 -s 8 --quiet -o hits.txt
+```
 
 ## Output examples:
 
+```bash
 Text mode (merged intervals)
 File: firmware.bin | Size: 1048576 bytes
 Params: threshold=7.2, step=16, smart=True, auto=False
@@ -74,8 +87,11 @@ Window sizes: [64]
 0x0001b800 - 0x0001b900 (window 64)
 
 Done. Found suspicious regions: 2
+```
 
 JSON mode (capped)
+
+```json
 {
   "total_hits": 2,
   "params": {
@@ -88,6 +104,8 @@ JSON mode (capped)
     {"offset": 112640, "entropy": 7.9320, "context": ".d...", "chunk_size": 64}
   ]
 }
+```
+
 ## When to use
 
 - Firmware analysis
