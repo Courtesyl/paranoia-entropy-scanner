@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # "Paranoia" Entropy Scanner v1
 
 **Entropy scanner for binary files** – finds high-entropy regions (crypto keys, encrypted/compressed data) with predictable memory usage, streaming merge, and JSON output.
@@ -48,13 +47,13 @@ options:
   --json                JSON output (machine-readable, capped at 1,000,000 hits)
   --version             Show version
 
-Examples
+## Examples
 Basic firmware scan
 ./paranoia.py firmware.bin -t 7.2 -c 64 -s 16 --smart
 Scan raw device (requires root)
 sudo ./paranoia.py /dev/sda -c 4096 --auto
 
- Reading raw devices may be slow and requires appropriate permissions.
+Reading raw devices may be slow and requires appropriate permissions.
 
 Pipe with JSON output
 cat encrypted.bin | ./paranoia.py - -t 6.0 --json > report.json
@@ -129,6 +128,4 @@ JSON mode (capped)
 MIT – see `LICENSE` file.
 
 ## Author
-=======
-# paranoia-entropy-scanner
->>>>>>> 3664acdc6e918737276a154ffc2d6b189fb26d51
+Courtesyl
