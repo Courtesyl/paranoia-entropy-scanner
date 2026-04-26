@@ -23,12 +23,14 @@
 chmod +x paranoia.py
 sudo cp paranoia.py /usr/local/bin/   # optional
 
+---
 
-usage: paranoia.py [-h] [-t THRESHOLD] [-c CHUNK] [-s STEP] [-o OUTPUT]
+## Usage
+paranoia.py [-h] [-t THRESHOLD] [-c CHUNK] [-s STEP] [-o OUTPUT]
                    [--smart] [--auto] [--quiet] [--json] [--version]
                    path
 
-Paranoia Entropy Scanner v6.1 — rolling histogram, streaming merge, JSON limit
+Paranoia Entropy Scanner v1 — rolling histogram, streaming merge, JSON limit
 
 positional arguments:
   path                  Path to file or '-' for stdin
